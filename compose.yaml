@@ -1,0 +1,20 @@
+services:
+  openflux:
+    build:
+      context: https://github.com/p1neappleXpress/OpenFlux.git#main
+    image: openflux:local
+    container_name: openflux
+    restart: always
+    cap_add:
+      - NET_RAW
+      - NET_ADMIN
+    volumes:
+      - ./.secret.key:/secret.key:ro
+    entrypoint: ["/usr/local/bin/openflux"]
+    command:
+      - "--role=exit"
+      - "--mode=l4"
+      - "--transport=boards"
+      - "--url=..."
+      - "--encryption-key-file=secret.key"
+      - "--share"
