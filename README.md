@@ -1,6 +1,8 @@
 # openflux exit node
 
-0. installed docker via
+minimal docker setup for [original project](https://github.com/p1neappleXpress/OpenFlux)
+
+0. installed docker
 ```bash
 sudo curl -fsSL https://get.docker.com | sh
 
@@ -26,3 +28,5 @@ docker compose down && docker compose up -d && docker compose logs -ft
 ```
 
 you'll see openflux:// link and QR there, just CTRL+C to exit logs
+
+this project is unlicensed, original openflux license [here](https://github.com/p1neappleXpress/OpenFlux/blob/main/LICENSE)
